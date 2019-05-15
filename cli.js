@@ -98,6 +98,8 @@ const compileCmd = (yargs) => {
   const deploymentManifestPath = isAbsolute(argv.deploymentManifest) ? argv.deploymentManifest : join(process.cwd(), argv.deploymentManifest);
   const clearOptions = { clearWorkspace: argv.clearWorkspace };
 
+  console.log('deploymentManifestPath', deploymentManifestPath);
+
   prepare(
     clearOptions
   , preparePlugins
